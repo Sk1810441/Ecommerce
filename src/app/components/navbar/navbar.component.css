@@ -1,0 +1,69 @@
+.sidenav-container {
+  height: 100%;
+  min-height: 100vh !important;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.searchbtn{
+  height: 30px;
+  line-height: 0.5px;
+}
+.row1{
+  display: none;
+  margin-bottom: -20px;
+}
+.searchfield{
+  width:300px;
+  height: 30px;
+}
+.searchbox1{
+  width:100%;
+}
+.searchfield1{
+  width:77%;
+  height: 30px;
+}
+
+.searchicon{
+  display: none;
+}
+
+h3{
+  margin-bottom: 0px;
+}
+
+.maxwidth{
+  max-width: 150px;
+}
+
+.size{
+  line-height: 0.8 !important;
+  padding:0rem !important;
+}
+
+
+@media screen and (max-width: 700px) {
+  .row1{
+    display: inline;
+  }
+  .searchbox{
+    display: none;
+  }
+  .searchicon{
+    display: contents;
+  }
+}
+

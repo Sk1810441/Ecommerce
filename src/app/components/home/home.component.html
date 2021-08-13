@@ -1,0 +1,69 @@
+<div *ngIf="message; else error">
+  <div class="container container-error text-center mt-5 mb-5 ">
+    <h1 style="font-size: 100px; margin: 50px;">😯</h1>
+    <h2>{{message}}</h2>
+  </div>
+</div>
+
+<ng-template #error>
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li class="carousel-btn active" data-target="#demo" data-slide-to="0"></li>
+    <li class="carousel-btn" data-target="#demo" data-slide-to="1"></li>
+    <li class="carousel-btn" data-target="#demo" data-slide-to="2"></li>
+    <li class="carousel-btn" data-target="#demo" data-slide-to="3"></li>
+    <li class="carousel-btn" data-target="#demo" data-slide-to="4"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/image/foodbanner6.png" alt="Los Angeles" width="1100" height="200">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/image/foodbanner6.png" alt="Chicago" width="1100" height="200">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/image/foodbanner6.png" alt="New York" width="1100" height="200">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/image/foodbanner6.png" alt="Chicago" width="1100" height="200">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/image/foodbanner6.png" alt="New York" width="1100" height="200">
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let category_list of category_list  let i = index" [attr.data-index]="i">
+  <div class="container-fluid p-2 wow zoomIn"
+    [ngClass]="[ i % 3 == 0 ? 'bg-success' : i % 3 == 1 ? 'bg-primary' : 'bg-secondary']" data-wow-duration="1s"
+    data-wow-delay="0.2s" *ngIf="category_list.product_list.length == 4">
+
+    <div class="container">
+      <h2 class="text-light">{{category_list.category_name}}
+
+        <button class="btn btn-dark float-right" (click)="viewAll(category_list.id)">
+          View all
+        </button>
+      </h2>
+    </div>
+    <div class="container productcontainer">
+      <div class="row p-2 ">
+        <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 productcard"
+          *ngFor="let product_list of category_list.product_list">
+          <div class="card mx-auto" (click)="viewProduct(product_list.id)">
+            <img class="card-img-top" src="../../../assets/image/circleloader.gif" jpPreload="{{product_list.banner_image}}" fallback="../../../assets/image/not-found.png" />
+            <!-- <img class="card-img-top" src="{{product_list.banner_image}}"
+              onerror="this.scr='.../../assets/image/product1.jpg'"> -->
+            <p class="card-title pl-3 line marginbottom mx-auto font-weight-bold">{{product_list.product_name}}</p>
+            <p class="card-title pl-3 line marginbottom mx-auto  font-weight-bold">&#x20B9;{{product_list.selling_price}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</ng-template>

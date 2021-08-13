@@ -1,0 +1,36 @@
+<!-- Default form login -->
+
+  <div class="container text-center mt-5 mb-5 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+    <p class="h4 mb-4">Login</p>
+  <!-- Email -->
+      <mat-form-field class="inputsize" appearance="outline">
+        <mat-label>Enter your gmail</mat-label>
+        <input name="usergmail" type="gmail" [(ngModel)]="usergmail"  matInput placeholder="abc12@gmail.com" required [formControl]="gmail">
+         <mat-icon matSuffix>email</mat-icon>
+        <mat-error *ngIf="gmail.invalid">{{getErrorMessagegmail()}}</mat-error>
+      </mat-form-field>
+    <!-- Password -->
+    <mat-form-field class="inputsize" appearance="outline">
+      <mat-label>Enter your password</mat-label>
+      <input name="userpassword"  [(ngModel)]="userpassword" matInput [type]="hide ? 'password' : 'text'" required [formControl]="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error *ngIf="password.invalid">{{getErrorMessagepassword()}}</mat-error>
+    </mat-form-field>
+    <div class="d-flex justify-content-around">
+      <div>
+        <!-- Remember me -->
+        <mat-checkbox name="remember"  [(ngModel)]="remember">Remember me</mat-checkbox>
+      </div>
+      <div>
+        <!-- Forgot password -->
+        <a [routerLink]="['/forgotpassword']">Forgot password?</a>
+      </div>
+    </div>
+    <!-- Sign in button -->
+    <div class="infinite wow pulse"><button type="button" [disabled]="gmail.invalid || password.invalid" (click)="login()" mat-raised-button color="primary" ><mat-icon>person</mat-icon> Login</button></div>
+    <!-- Register -->
+    <p>Not a member?<a [routerLink]="['/register']">Register</a></p>
+  </div>
+

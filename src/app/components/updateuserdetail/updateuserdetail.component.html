@@ -1,0 +1,64 @@
+
+<!-- userdetail -->
+
+<div class="container1 mx-auto  mt-5 mb-5 wow bounceIn " data-wow-duration="1s" data-wow-delay="0.2s">
+  <p class="h4 mb-4 pl-5 pt-2">Profile Update</p>
+  <hr>
+  <div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Name :</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" placeholder="Enter your name" [(ngModel)]="username"  required [formControl]="name">
+    <mat-error *ngIf="name.invalid">{{getErrorMessagename()}}</mat-error>
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Mobile no :</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" placeholder="Enter your mobile no" [(ngModel)]="usermob1"  required [formControl]="mob1">
+    <mat-error *ngIf="mob1.invalid">{{getErrorMessagemob1()}}</mat-error>
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Mobile no :</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" placeholder="Enter your mobile no" [(ngModel)]="usermob2" [formControl]="mob2">
+    <mat-error *ngIf="mob2.invalid">{{getErrorMessagemob2()}}</mat-error>
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">District :</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" placeholder="Enter your District name" [(ngModel)]="usercity" required  [formControl]="city">
+    <mat-error *ngIf="city.invalid">{{getErrorMessagecity()}}</mat-error>
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Village :</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" placeholder="Enter your village/local area name" [(ngModel)]="uservillage"  required  [formControl]="village">
+    <mat-error *ngIf="village.invalid">{{getErrorMessagevillage()}}</mat-error>
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Pin code :</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" placeholder="Enter your area pin code" [(ngModel)]="userpincode" required  [formControl]="pincode">
+    <mat-error *ngIf="pincode.invalid">{{getErrorMessagepincode()}}</mat-error>
+  </div>
+</div>
+</div>
+<hr>
+<div class="container-fluid text-center">
+  <div class="row">
+    <div class="  col-6 mx-auto">
+      <button [disabled]="name.invalid || mob1.invalid || mob2.invalid || city.invalid || village.invalid || pincode.invalid " (click)="updatedata()" mat-raised-button color="primary" ><mat-icon>update</mat-icon> Update</button>
+    </div>
+
+    <div class="  col-6 mx-auto">
+      <button  mat-raised-button color="primary" (click)="goback();" ><mat-icon>cancel</mat-icon> Cancel</button>
+    </div>
+
+  </div>
+</div>
+ </div>

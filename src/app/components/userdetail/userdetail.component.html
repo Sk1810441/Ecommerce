@@ -1,0 +1,44 @@
+
+<!-- userdetail -->
+
+<div class="container1 mx-auto  mt-5 mb-5 wow bounceIn " data-wow-duration="1s" data-wow-delay="0.2s">
+  <p class="h4 mb-4 pl-5 pt-2 ">My Account</p>
+  <hr>
+  <div class=" row pl-2">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      <h3 class="text-center"><strong>Personal Infomation</strong></h3>
+      <h3>Name :<span>  {{username}}</span></h3>
+      <h3>Gmail :<span>  {{usergmail}}</span></h3>
+      <h3>Mobile no :<span>  {{usermob1}}</span></h3>
+      <h3>Mobile no :<span>  {{usermob2}}</span></h3>
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      <h3 class="text-center"><strong>Address</strong></h3>
+      <h3>District :<span>  {{usercity}}</span></h3>
+      <h3>Village :<span>  {{uservillage}}</span></h3>
+      <h3>Pin code :<span>  {{userpincode}}</span></h3>
+    </div>
+</div>
+<hr>
+<div class="container text-center">
+  <div class="row">
+    <div class=" col-sm-12 col-md-3  mx-auto ">
+      <button  class="mt-1 mb-1 size"  mat-raised-button color="primary"(click)="edit()" ><mat-icon>update</mat-icon> Edit</button>
+    </div>
+
+    <div class=" col-sm-12 col-md-3  mx-auto">
+      <button class="mt-1 mb-1 size"  mat-raised-button color="primary"(click)="gocart()"><mat-icon>shopping_cart</mat-icon> My Cart</button>
+    </div>
+
+    <div class=" col-sm-12 col-md-3  mx-auto">
+      <button  class="mt-1 mb-1 size"  mat-raised-button color="primary"(click)="gomyorder()"><mat-icon>shopping_basket</mat-icon> My Order</button>
+    </div>
+
+    <div class=" col-sm-12 col-md-3  mx-auto">
+      <button  class="mt-1 mb-1 size"  mat-raised-button color="primary"(click)="gomywishlist()"><mat-icon>favorite</mat-icon> My Wishlist</button>
+    </div>
+  </div>
+</div>
+ </div>
+
+

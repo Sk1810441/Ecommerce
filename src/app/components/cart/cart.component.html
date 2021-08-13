@@ -1,0 +1,35 @@
+<div class="container bg-light" *ngIf="response">
+  <h2 class="bold pl-3 pt-2">My Cart</h2>
+  <hr class="line">
+
+  <div class="row">
+    <div class="col-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+      <img class="py-2 mx-1" src="../../../assets/image/product-image.jpg" width="120px" height="150px"/>
+    </div>
+    <div class="col-8 col-sm-8 col-md-9 col-lg-10 col-xl-10">
+      <h3 class=" line">Product name Amit kumar</h3>
+      <p class="text-secondary line">Product short description Amit kumar</p>
+      <p class="line">Rs:1000 X 5</p>
+      <p class="line"> = Rs. 1000</p>
+      <p><button class="btn-color  "><span class="material-icons ">add</span></button>
+        <button class="btn-color mx-3"><span class="material-icons ">remove</span></button>
+        <button class="btn btn-secondary btn-sm inline martop"><mat-icon class="btn-remove">remove_shopping_cart</mat-icon>Remove</button>
+      </p>
+    </div>
+  </div>
+  <hr class="line">
+
+  <div class="row pr-4">
+    <h3 class="ml-auto">Total Price:- 50000</h3>
+  </div>
+  <hr class="line">
+  <div class="pb-3 text-center">
+    <div class="infinite wow pulse"><button class="btn btn-primary btn-sm mx-auto"><mat-icon>touch_app</mat-icon>Place order</button></div>
+  </div>
+
+</div>
+
+<div *ngIf="response == false" class="container container-not-found text-center mt-5 mb-5  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+  <h1 style="font-size: 100px; margin: 50px;">😯</h1>
+  <h2>Your Cart is empty.</h2>
+</div>

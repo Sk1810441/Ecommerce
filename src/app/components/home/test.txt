@@ -1,0 +1,748 @@
+isload
+home.component.ts:36 isload
+home.component.ts:36 isload
+home.component.ts:36 isload
+home.component.ts:36 isload
+home.component.ts:36 isload
+
+
+(load)="isload(product_list.product_banner)"
+
+onerror=this.scr="../../../assets/image/product.jpg"
+
+ /* product_image="../../../assets/image/product-ima.jpg";
+  showedImage="../../assets/image/not-found.png";
+  mainImage="../../../assets/image/product-image.jpg";
+  show:boolean=false;*/
+
+  /*   setimage() {
+    console.log("image set time"+  this.show);
+    setTimeout(function(){
+      this.show=true;
+      console.log("image set time"+  this.show);
+      }, 3000);
+
+      console.log("image set "+  this.show);
+  //  this.showedImage = "product_list.product_banner";
+
+
+
+}*/
+
+isload(image_url:string){
+  console.log("isload  "+image_url);
+  return image_url;
+}
+
+
+   setimage(){
+     console.log("image set");
+    // this.showedImage = this.mainImage;
+     setTimeout(function(){
+      console.log("image set time");
+      this.showedImage = "../../../assets/image/product-image.jpg";
+      console.log("image set time"+  this.showedImage);
+     }, 3000);
+   }
+
+ /*  img.onload = () => {
+    this.showedImage = this.mainImage;
+  };
+
+  setimage(){
+    var item = document.getElementById("myImage");
+    // switch the image to the URL specified in data-src
+    item.onload = function(){
+      setTimeout(function(){
+        Image.src = item.dataset.src;
+console.log("image set time"+  this.show);
+}, 3000);
+    };
+
+  }*/
+
+
+ 
+
+ category_list:category[] =[
+    {
+      category_id:1 ,
+      category_name:"Category number 1",
+      product_list:[
+        // {
+        //    product_id:1,
+        //    product_name :"Rice pack of 100 kg and get 3 pack " ,
+        //    product_price:1000,
+        //    product_short_description :"4 X 25 per pack",
+        //    product_banner :"https://i.pinimg.com/originals/43/17/86/43178617d098b3cedb35c28d24d22f70.png"
+        // },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 5 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"https://mobileprice-bangladesh.com/wp-content/uploads/2018/11/Nokia-225-Dual-SIM.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"https://webstyle.unicomm.fsu.edu/3.2/img/placeholders/ratio-pref-1-1.png"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"https://pngimg.com/uploads/number1/number1_PNG14884.png"
+    },
+      ]
+    },
+    {
+      category_id:2,
+      category_name:"Category number 2",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"https://upload.wikimedia.org/wikipedia/commons/3/35/Seoul_Metro_Line_2.svg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"https://workmacro.com/wp-content/uploads/2018/02/1-by-1-1024x1024.png"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRMJzoA-zbaFtz6UF7qt9Be1d_601nNAoDTA&usqp=CAU"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRAjKYjboD8Mw2PTm7fJz2bdEie8Fe6rvDkw&usqp=CAU"
+    },
+      ]
+    },
+    {
+      category_id:3,
+      category_name:"Category number 3",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"https://lunerontheatre.files.wordpress.com/2012/01/one.png"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"https://www.stroke.org/-/media/stroke-images/about-the-american-stroke-association/2019-american-stroke-month-images/fletter.jpg?h=267&la=en&mw=450&w=267&hash=0D6C1EDC7E8B8C9D9C3568DFD52CB4F9FBDBCBAD"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"https://www.stroke.org/-/media/stroke-images/about-the-american-stroke-association/2019-american-stroke-month-images/aletter.jpg?h=267&la=en&mw=450&w=268&hash=6A09C7E1596F465FE7832ED417E12A69D5FAB4C5"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQOqxc2Cub0PipQLndyMwJ2Khojv8wVqWKo9g&usqp=CAU"
+    },
+      ]
+    },
+    {
+      category_id:4,
+      category_name:"Category number 4",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYBrop1_g45y3D0NFAhORPr9B8CCWPbO94_w&usqp=CAU"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"https://previews.123rf.com/images/inkdrop/inkdrop1903/inkdrop190301260/119166933-gold-glitter-letter-r-shiny-sparkling-golden-capital-letter-3d-rendering.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Solid_black.svg/240px-Solid_black.svg.png"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTlZDL0DFyR9QOmLuBg037mUn_VX-odatRNVA&usqp=CAU"
+    },
+      ]
+    },
+    {
+      category_id:5 ,
+      category_name:"Category number 1",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/produc.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:6,
+      category_name:"Category number 2",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:7,
+      category_name:"Category number 3",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:8,
+      category_name:"Category number 4",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:9,
+      category_name:"Category number 1",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:10,
+      category_name:"Category number 2",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:11,
+      category_name:"Category number 3",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:12,
+      category_name:"Category number 4",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:13,
+      category_name:"Category number 1",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:14,
+      category_name:"Category number 2",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:15,
+      category_name:"Category number 3",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:16,
+      category_name:"Category number 4",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:17,
+      category_name:"Category number 1",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:18,
+      category_name:"Category number 2",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:19,
+      category_name:"Category number 3",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice pack of 100 kg and get 3 pack " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    },
+    {
+      category_id:20,
+      category_name:"Category number 4",
+      product_list:[
+        {
+           product_id:1,
+           product_name :"Rice  " ,
+           product_price:1000,
+           product_short_description :"4 X 25 per pack",
+           product_banner :"../../assets/image/product1.jpg"
+        },
+        {
+          product_id:2,
+          product_name :"Rice pack of 200 kg and get 3 pack Amit kumar sdnvkjsn " ,
+          product_price: 1000,
+          product_short_description :"4 X 25 per pack",
+          product_banner :"../../assets/image/product1.jpg"
+       },
+       {
+        product_id:3,
+        product_name :"Rice pack of 300 kg and get 3 pack " ,
+        product_price:1000,
+        product_short_description :"4 X 25 per pack",
+        product_banner :"../../assets/image/product1.jpg"
+     },
+     {
+       product_id:4,
+       product_name :"Rice pack of 400 kg and get 3 pack " ,
+       product_price: 1000,
+       product_short_description :"4 X 25 per pack",
+       product_banner :"../../assets/image/product1.jpg"
+    },
+      ]
+    }
+  ]

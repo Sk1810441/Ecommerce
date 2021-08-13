@@ -1,0 +1,110 @@
+
+<!-- Default form login -->
+
+<div class="container1 mx-auto text-center mt-5 mb-5 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+  <p class="h4 mb-4">Register </p>
+  <hr>
+  <div *ngIf="send; else elseBlock">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <h2 class="mx-auto">Personal information</h2>
+          <!-- Name -->
+          <mat-form-field class="inputsize" appearance="outline">
+            <mat-label>Enter your name</mat-label>
+            <input  name="username"  [(ngModel)]="username" type="text" matInput placeholder="Name" required  [formControl]="name">
+            <mat-icon matSuffix>person</mat-icon>
+            <mat-error *ngIf="name.invalid">{{getErrorMessagename()}}</mat-error>
+          </mat-form-field>
+          <!-- Email -->
+          <mat-form-field class="inputsize" appearance="outline">
+            <mat-label>Enter your gmail</mat-label>
+            <input name="usergmail" type="gmail" [(ngModel)]="usergmail" class="inputtag" matInput placeholder="xyz12@gmail.com" required  [formControl]="gmail">
+            <mat-icon matSuffix>email</mat-icon>
+            <mat-error *ngIf="gmail.invalid">{{getErrorMessagegmail()}}</mat-error>
+          </mat-form-field>
+                <!-- mob no1 -->
+          <mat-form-field class="inputsize" appearance="outline">
+            <mat-label>Enter your Mobile no.</mat-label>
+            <input  name="mob1"  [(ngModel)]="usermob1" type="number" matInput placeholder="+91-__________" required  [formControl]="mob1">
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-error *ngIf="mob1.invalid">{{getErrorMessagemob1()}}</mat-error>
+          </mat-form-field>
+                <!-- mob no2 -->
+          <mat-form-field class="inputsize" appearance="outline">
+            <mat-label>Enter your Mobile no</mat-label>
+            <input  name="mob2"  [(ngModel)]="usermob2" type="number" matInput placeholder="+91-__________" [formControl]="mob2">
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-error *ngIf="mob2.invalid">{{getErrorMessagemob2()}}</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <h2 class="mx-auto">Address</h2>
+            <!-- city -->
+          <!-- <mat-form-field class="inputsize" appearance="outline">
+            <mat-label>Enter your State name</mat-label>
+            <input  name="usercity"  [(ngModel)]="usercity" type="text" matInput placeholder="district name" required  [formControl]="city">
+            <mat-icon matSuffix>location_city</mat-icon>
+            <mat-error *ngIf="city.invalid">{{getErrorMessagecity()}}</mat-error>
+          </mat-form-field> -->
+          <!-- city -->
+          <mat-form-field class="inputsize" appearance="outline">
+            <mat-label>Enter your district name</mat-label>
+            <input  name="usercity"  [(ngModel)]="usercity" type="text" matInput placeholder="district name" required  [formControl]="city">
+            <mat-icon matSuffix>location_city</mat-icon>
+            <mat-error *ngIf="city.invalid">{{getErrorMessagecity()}}</mat-error>
+          </mat-form-field>
+                    <!-- local Area -->
+          <mat-form-field class="inputsize" appearance="outline">
+            <mat-label>Enter your village/Local area name</mat-label>
+            <input  name="uservillage"  [(ngModel)]="uservillage" type="text" matInput placeholder=" village/Local area name" required  [formControl]="village">
+            <mat-icon matSuffix>house</mat-icon>
+            <mat-error *ngIf="village.invalid">{{getErrorMessagevillage()}}</mat-error>
+          </mat-form-field>
+                    <!-- pin code -->
+          <mat-form-field class="inputsize" appearance="outline">
+            <mat-label>Enter your pin code</mat-label>
+            <input  name="userpincode"  [(ngModel)]="userpincode" type="text" matInput placeholder=" pin code" required  [formControl]="pincode">
+            <mat-icon matSuffix>place</mat-icon>
+            <mat-error *ngIf="pincode.invalid">{{getErrorMessagepincode()}}</mat-error>
+          </mat-form-field>
+          <!-- Password -->
+          <mat-form-field class="inputsize" appearance="outline">
+          <mat-label>Enter your password</mat-label>
+          <input name="userpassword"  [(ngModel)]="userpassword" matInput [type]="hide ? 'password' : 'text'" required [formControl]="password">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="password.invalid">{{getErrorMessagepassword()}}</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+       <!-- Sign in button -->
+       <div class="infinite wow pulse mx-auto"><button [disabled]="gmail.invalid || password.invalid || name.invalid || mob1.invalid || mob2.invalid || city.invalid || village.invalid || pincode.invalid " mat-raised-button color="primary" (click)="register()"><mat-icon>person</mat-icon> Register</button></div>
+       <!-- Register -->
+       <p class="mx-auto">Allready  member?<a [routerLink]="['/login']">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <div >
+      <mat-form-field class="inputsize" appearance="outline">
+        <mat-label>Enter opt send in your gmail</mat-label>
+        <input name="userotp"  [(ngModel)]="userotp"  matInput type='number' required [formControl]="otp">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>fiber_pin</mat-icon>
+        </button>
+        <mat-error *ngIf="otp.invalid">{{getErrorMessageotp()}}</mat-error>
+
+      </mat-form-field>
+
+      <div class="d-flex justify-content-around">
+          <div class="infinite wow pulse"><button (click)="otpVerify()" [disabled]="otp.invalid" mat-raised-button color="primary" ><mat-icon>done_all</mat-icon>Verify</button></div>
+      </div>
+    </div>
+  </ng-template>
+</div>

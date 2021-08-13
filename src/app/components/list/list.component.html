@@ -1,0 +1,30 @@
+<div *ngIf="message; else error">
+  <div class="container container-error text-center mt-5 mb-5 ">
+    <h1 style="font-size: 100px; margin: 50px;">😯</h1>
+    <h2>{{message}}</h2>
+  </div>
+</div>
+
+<ng-template #error>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s" *ngFor="let list of productList">
+        <a [routerLink]="['/product',list.id]">
+          <div class="row mx-1 borderradius20 liststyle">
+            <div class="col-4 marginleft ">
+              <img width="100" height="110" class="borderradius20 pl-2" src="../../../assets/image/circleloader.gif" jpPreload="{{list.banner_image}}" fallback="../../../assets/image/not-found.png" />
+              <!-- <img width="100" height="110" class="borderradius20 pl-2" src="{{list.banner_image}}"> -->
+            </div>
+            <div class="col-8 pl-4 lineheight">
+              <h3 class="lineheight pt-2 line2"><strong>{{list.product_name}} </strong></h3>
+              <p class="line">{{list.short_description}}</p>
+              <p class="line">&#x20B9; {{list.selling_price}}</p>
+            </div>
+          </div>
+        </a>
+        <br>
+      </div>
+    </div>
+  </div> 
+</ng-template>

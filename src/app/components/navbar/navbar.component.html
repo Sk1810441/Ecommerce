@@ -1,0 +1,109 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'dialog'"
+      [mode]="(isHandset$ | async) ? 'over' : 'over'">
+      <mat-toolbar class="bg-primary">
+        <span class="material-icons">store</span>Supermart
+        <button
+        class="ml-auto"
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">clear</mat-icon>
+      </button>
+      </mat-toolbar>
+      <mat-nav-list>
+        <!-- <h2 class="pl-4 font-weight-bold text-primary">Category</h2> -->
+        <a [routerLink]="['/home']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">home</span><span class="pl-1 font-weight-bold">home</span></h3></a>
+        <a [routerLink]="['/register']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left"><img class="infinite wow swing" width="24px" height="24px" src="../../assets/image/projecticon.svg"></span><span class="pl-1 font-weight-bold">register</span></h3></a>
+        <a [routerLink]="['/forgotpassword']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left"><img class="infinite wow swing" width="24px" height="24px" src="../../assets/image/contacticon.svg"></span><span class="pl-1 font-weight-bold">forgotpassword</span></h3></a>
+        <a [routerLink]="['/userdetail']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left"><img class="infinite wow swing" width="24px" height="24px" src="../../assets/image/abouticon.svg"></span><span class="pl-1 font-weight-bold">userdetail</span></h3></a>
+        <a [routerLink]="['/updateuserdetail']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left"><img class="infinite wow swing" width="24px" height="24px" src="../../assets/image/regicon.svg"></span><span class="pl-1 font-weight-bold">updateuserdetail</span></h3></a>
+        <a [routerLink]="['/list']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">category</span><span class="pl-1 font-weight-bold">product list</span></h3></a>
+        <a [routerLink]="['/login']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">category</span><span class="pl-1 font-weight-bold">Login</span></h3></a>
+        <a [routerLink]="['/product/5']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">category</span><span class="pl-1 font-weight-bold">product</span></h3></a>
+        <hr>
+        <div *ngIf="user_status"><a  [routerLink]="['/userdetail']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">person</span><span class="pl-1 font-weight-bold">My Account</span></h3></a></div>
+        <div *ngIf="user_status"><a [routerLink]="['/cart']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">shopping_cart</span><span class="pl-1 font-weight-bold">My Cart</span></h3></a></div>
+        <div *ngIf="user_status"><a [routerLink]="['/order']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">shopping_basket</span><span class="pl-1 font-weight-bold">My Order</span></h3></a></div>
+        <div *ngIf="user_status"><a [routerLink]="['/wishlist']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">favorite</span><span class="pl-1 font-weight-bold">My Wishlist</span></h3></a></div>
+        <div *ngIf="user_status == false"><a [routerLink]="['/login']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">category</span><span class="pl-1 font-weight-bold">login</span></h3></a></div>
+        <a [routerLink]="['/help']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">help</span><span class="pl-1 font-weight-bold">Help Center</span></h3></a>
+        <a [routerLink]="['/']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">business_center</span><span class="pl-1 font-weight-bold">Sell on Supermart</span></h3></a>
+        <a [routerLink]="['/']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">get_app</span><span class="pl-1 font-weight-bold">Download App</span></h3></a>
+        <div *ngIf="user_status"><a [routerLink]="['/login']"(click)="drawer.toggle()"><h3 class="pl-3"><span class="float-left infinite wow swing material-icons">exit_to_app</span><span class="pl-1 font-weight-bold">Logout</span></h3></a></div>
+        <br>
+        <br>
+      </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row class="row">
+
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <a [routerLink]="['/home']"><h1 class="text-left pl-3 heading text-light">supermart</h1></a>
+        <span class="mx-auto">
+          <form class="form-inline searchbox" >
+            <input matInput class="form-control bg-light searchfield" type="search" placeholder=" Search product" >
+            <button mat-stroked-button class="bg-light text-primary searchbtn" (click)="search()">Search</button>
+          </form>
+        </span>
+          <!-- <span class=" ml-auto"> <span class="material-icons pr-3">shopping_cart</span> -->
+        <span class=" ml-auto">
+            <span  *ngIf="user_status" class="material-icons px-1 searchicon" style="cursor: pointer;" (click)="showsearchbar()">search</span>
+            <span *ngIf="user_status" class="material-icons px-1 ml-2 " style="cursor: pointer;" (click)="gocart()">shopping_cart</span>
+            <span class="material-icons px-1" style="cursor: pointer;" [matMenuTriggerFor]="menu">person</span>
+            <!-- <span  class="material-icons px-1" style="cursor: pointer;">share</span> -->
+        </span>
+
+        <mat-menu #menu="matMenu">
+          <div class="text-center p-2 maxwidth">
+            <div *ngIf="user_status">
+              <button class="btn-block" width="150px" type="button"  mat-raised-button (click)="gomyaccount()" ><mat-icon>person</mat-icon> My Account</button>
+              <button class="btn-block" width="150px" type="button"  mat-raised-button (click)="logout()" ><mat-icon>exit_to_app</mat-icon>Logout</button>
+            </div>
+            <div *ngIf="user_status == false">
+              <button class="btn-block" type="button"  mat-raised-button (click)="gologin()" ><mat-icon>face</mat-icon>Login</button>
+            </div>
+          </div>
+        </mat-menu>
+
+    </mat-toolbar-row>
+    <mat-toolbar-row *ngIf="showsearch" class="row1">
+
+      <!-- <form class="form-inline  ">
+        <div class="mx-auto searchbox1">
+          <span class="mx-auto">
+        <input  matInput class="form-control bg-light searchfield1" type="search" placeholder=" Search product" >
+        <button style="margin-top: -30px;" mat-stroked-button class="bg-light text-primary float-right searchbtn" (click)="search()">Search</button>
+      </span>
+      </div>
+      </form> -->
+
+     <div class="input-group mb-3">
+        <input matInput class="form-control bg-light searchfield1" type="search" placeholder=" Search product" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <span class="input-group-text size" id="basic-addon2"  (click)="search()"> <span  class="material-icons px-1">search</span></span>
+        </div>
+      </div>
+
+
+    </mat-toolbar-row>
+    </mat-toolbar>
+
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
